@@ -1,0 +1,16 @@
+{
+  "name": "MarketX",
+  "version": "1.0.0",
+  "description": "Backend for marketX platform",
+  "main": "server.js",
+  "repository": "https://github.com/zedann/MarketX.git",
+  "author": "Zedan <zedanmohamedcp@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
