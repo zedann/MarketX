@@ -7,6 +7,10 @@ DB_NAME = marketx
 CONTAINER_NAME = postgres_db
 MIGRATIONS_DIR = migrations
 
+# Force migration version
+migrate-force:
+	@read -p "Enter version to force: " version; \
+	migrate -path $(MIGRATIONS_DIR) -database "postgresql://$(DB_USER):$(DB_PASSWORD)@localhost:5432/$(DB_NAME)?sslmode=disable" force $$version
 # Connect to PostgreSQL database
 db-connect:
 	docker exec -it $(CONTAINER_NAME) psql -U $(DB_USER) -d $(DB_NAME)
